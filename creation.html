@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉石创作 - 玉韵</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/creation.css">
+</head>
+<body>
+    <!-- 顶部横幅 -->
+    <header class="header" id="header">
+        <div class="header-decoration header-decoration-left"></div>
+        <div class="header-decoration header-decoration-right"></div>
+        
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">玉</span>
+                <div class="logo-text">
+                    <h1>玉韵</h1>
+                    <p class="logo-subtitle">Jade Charm</p>
+                </div>
+            </a>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">首页</a></li>
+                    <li class="nav-item"><a href="gallery.html">玉石鉴赏</a></li>
+                    <li class="nav-item"><a href="culture.html">文化典藏</a></li>
+                    <li class="nav-item active"><a href="creation.html">玉石创作</a></li>
+                    <li class="nav-item"><a href="appraisal.html">专业鉴定</a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+        
+        <div class="cloud-pattern"></div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="page-main">
+        <!-- 页面标题区 -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h2 class="page-title">玉石创作</h2>
+                <p class="page-subtitle">Jade Creation Studio</p>
+                <p class="page-desc">创意设计，定制专属美玉</p>
+            </div>
+            <div class="page-hero-decoration"></div>
+        </section>
+
+        <!-- 创作工作室 -->
+        <section class="creation-studio">
+            <div class="studio-container">
+                <!-- 左侧：创作区 -->
+                <div class="studio-workspace">
+                    <div class="workspace-header">
+                        <h3>创作区域</h3>
+                        <div class="workspace-tools">
+                            <button class="tool-btn active" data-tool="select" title="选择">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/>
+                                </svg>
+                            </button>
+                            <button class="tool-btn" data-tool="shape" title="形状">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="9"/>
+                                </svg>
+                            </button>
+                            <button class="tool-btn" data-tool="text" title="文字">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 7V4h16v3M9 20h6M12 4v16"/>
+                                </svg>
+                            </button>
+                            <button class="tool-btn" data-tool="color" title="颜色">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <path d="M12 3a9 9 0 0 1 0 18"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="canvas-container" id="canvasContainer">
+                        <canvas id="creationCanvas"></canvas>
+                        <div class="canvas-placeholder">
+                            <div class="placeholder-jade">
+                                <div class="jade-shape circle" data-shape="circle"></div>
+                            </div>
+                            <p>选择形状开始创作，或上传您的设计草图</p>
+                        </div>
+                    </div>
+                    
+                    <div class="workspace-actions">
+                        <button class="action-btn secondary" id="resetBtn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                                <path d="M3 3v5h5"/>
+                            </svg>
+                            重置
+                        </button>
+                        <button class="action-btn secondary" id="uploadBtn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            上传草图
+                        </button>
+                        <button class="action-btn primary" id="saveBtn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                                <polyline points="17 21 17 13 7 13 7 21"/>
+                                <polyline points="7 3 7 8 15 8"/>
+                            </svg>
+                            保存设计
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 右侧：配置面板 -->
+                <div class="studio-panel">
+                    <!-- 形状选择 -->
+                    <div class="panel-section">
+                        <h3 class="panel-title">选择形状</h3>
+                        <div class="shape-grid" id="shapeGrid">
+                            <button class="shape-btn active" data-shape="circle">
+                                <div class="shape-preview circle"></div>
+                                <span>圆形</span>
+                            </button>
+                            <button class="shape-btn" data-shape="oval">
+                                <div class="shape-preview oval"></div>
+                                <span>椭圆形</span>
+                            </button>
+                            <button class="shape-btn" data-shape="rectangle">
+                                <div class="shape-preview rectangle"></div>
+                                <span>方形</span>
+                            </button>
+                            <button class="shape-btn" data-shape="drop">
+                                <div class="shape-preview drop"></div>
+                                <span>水滴形</span>
+                            </button>
+                            <button class="shape-btn" data-shape="leaf">
+                                <div class="shape-preview leaf"></div>
+                                <span>叶子形</span>
+                            </button>
+                            <button class="shape-btn" data-shape="bamboo">
+                                <div class="shape-preview bamboo"></div>
+                                <span>竹节形</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 玉石材质 -->
+                    <div class="panel-section">
+                        <h3 class="panel-title">玉石材质</h3>
+                        <div class="material-grid" id="materialGrid">
+                            <button class="material-btn active" data-material="feicui" data-color="#2E8B57">
+                                <div class="material-preview" style="background: linear-gradient(135deg, #2E8B57, #3CB371);"></div>
+                                <span>翡翠绿</span>
+                            </button>
+                            <button class="material-btn" data-material="hetian" data-color="#F5F5DC">
+                                <div class="material-preview" style="background: linear-gradient(135deg, #F5F5DC, #FFFAF0);"></div>
+                                <span>羊脂白</span>
+                            </button>
+                            <button class="material-btn" data-material="biyu" data-color="#228B22">
+                                <div class="material-preview" style="background: linear-gradient(135deg, #228B22, #32CD32);"></div>
+                                <span>菠菜绿</span>
+                            </button>
+                            <button class="material-btn" data-material="ziyu" data-color="#9370DB">
+                                <div class="material-preview" style="background: linear-gradient(135deg, #9370DB, #BA55D3);"></div>
+                                <span>紫罗兰</span>
+                            </button>
+                            <button class="material-btn" data-material="huangyu" data-color="#DAA520">
+                                <div class="material-preview" style="background: linear-gradient(135deg, #DAA520, #FFD700);"></div>
+                                <span>和田黄</span>
+                            </button>
+                            <button class="material-btn" data-material="heshi" data-color="#2F4F4F">
+                                <div class="material-preview" style="background: linear-gradient(135deg, #2F4F4F, #696969);"></div>
+                                <span>墨玉</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 雕刻图案 -->
+                    <div class="panel-section">
+                        <h3 class="panel-title">雕刻图案</h3>
+                        <div class="pattern-grid" id="patternGrid">
+                            <button class="pattern-btn" data-pattern="none">
+                                <div class="pattern-preview none">—</div>
+                                <span>无</span>
+                            </button>
+                            <button class="pattern-btn active" data-pattern="guashi">
+                                <div class="pattern-preview guashi">卦</div>
+                                <span>八卦</span>
+                            </button>
+                            <button class="pattern-btn" data-pattern="lianhua">
+                                <div class="pattern-preview lianhua">莲</div>
+                                <span>莲花</span>
+                            </button>
+                            <button class="pattern-btn" data-pattern="ruyi">
+                                <div class="pattern-preview ruyi">如意</div>
+                                <span>如意</span>
+                            </button>
+                            <button class="pattern-btn" data-pattern="shou">
+                                <div class="pattern-preview shou">寿</div>
+                                <span>寿字</span>
+                            </button>
+                            <button class="pattern-btn" data-pattern="fu">
+                                <div class="pattern-preview fu">福</div>
+                                <span>福字</span>
+                            </button>
+                            <button class="pattern-btn" data-pattern="lu">
+                                <div class="pattern-preview lu">禄</div>
+                                <span>禄字</span>
+                            </button>
+                            <button class="pattern-btn" data-pattern="bi">
+                                <div class="pattern-preview bi">璧</div>
+                                <span>玉璧</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- 尺寸调整 -->
+                    <div class="panel-section">
+                        <h3 class="panel-title">尺寸调整</h3>
+                        <div class="size-controls">
+                            <div class="size-slider">
+                                <label>宽度: <span id="widthValue">100</span>mm</label>
+                                <input type="range" id="widthSlider" min="30" max="200" value="100">
+                            </div>
+                            <div class="size-slider">
+                                <label>高度: <span id="heightValue">100</span>mm</label>
+                                <input type="range" id="heightSlider" min="30" max="200" value="100">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 戒指尺寸(可选) -->
+                    <div class="panel-section">
+                        <h3 class="panel-title">戒指尺寸</h3>
+                        <div class="ring-size-grid">
+                            <button class="ring-btn" data-size="10">10</button>
+                            <button class="ring-btn" data-size="11">11</button>
+                            <button class="ring-btn" data-size="12">12</button>
+                            <button class="ring-btn" data-size="13">13</button>
+                            <button class="ring-btn active" data-size="14">14</button>
+                            <button class="ring-btn" data-size="15">15</button>
+                            <button class="ring-btn" data-size="16">16</button>
+                            <button class="ring-btn" data-size="17">17</button>
+                            <button class="ring-btn" data-size="18">18</button>
+                            <button class="ring-btn" data-size="19">19</button>
+                            <button class="ring-btn" data-size="20">20</button>
+                            <button class="ring-btn" data-size="21">21</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 设计灵感 -->
+        <section class="inspiration-section">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <span class="section-line"></span>
+                    <h2 class="section-title">设计灵感</h2>
+                    <span class="section-subtitle">Design Inspiration</span>
+                    <span class="section-line"></span>
+                </div>
+            </div>
+            
+            <div class="inspiration-gallery">
+                <div class="inspiration-card">
+                    <img src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?w=400&h=400&fit=crop" alt="观音设计">
+                    <div class="inspiration-overlay">
+                        <h4>观音吊坠</h4>
+                        <p>慈悲庄严，护佑平安</p>
+                    </div>
+                </div>
+                <div class="inspiration-card">
+                    <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=400&h=400&fit=crop" alt="平安扣设计">
+                    <div class="inspiration-overlay">
+                        <h4>平安扣</h4>
+                        <p>圆满和谐，平安吉祥</p>
+                    </div>
+                </div>
+                <div class="inspiration-card">
+                    <img src="https://images.unsplash.com/photo-1598618356794-eb1720430eb4?w=400&h=400&fit=crop" alt="手镯设计">
+                    <div class="inspiration-overlay">
+                        <h4>玉镯</h4>
+                        <p>温润典雅，腕间风情</p>
+                    </div>
+                </div>
+                <div class="inspiration-card">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop" alt="戒指设计">
+                    <div class="inspiration-overlay">
+                        <h4>戒指</h4>
+                        <p>指间永恒，承诺一生</p>
+                    </div>
+                </div>
+                <div class="inspiration-card">
+                    <img src="https://images.unsplash.com/photo-1611080541599-8c6dbde6ed28?w=400&h=400&fit=crop" alt="手链设计">
+                    <div class="inspiration-overlay">
+                        <h4>手链</h4>
+                        <p>珠圆玉润，腕上风华</p>
+                    </div>
+                </div>
+                <div class="inspiration-card">
+                    <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400&h=400&fit=crop" alt="摆件设计">
+                    <div class="inspiration-overlay">
+                        <h4>摆件</h4>
+                        <p>案头雅玩，陶冶性情</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 提交设计 -->
+        <section class="submit-section">
+            <div class="submit-container">
+                <h3>提交您的设计</h3>
+                <p>完成设计后，留下您的联系方式，我们的设计师将与您联系</p>
+                <form class="submit-form" id="submitForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="designName">设计名称</label>
+                            <input type="text" id="designName" placeholder="给您的设计起个名字" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">您的姓名</label>
+                            <input type="text" id="userName" placeholder="请输入姓名" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="userPhone">联系电话</label>
+                            <input type="tel" id="userPhone" placeholder="请输入手机号" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">电子邮箱</label>
+                            <input type="email" id="userEmail" placeholder="请输入邮箱">
+                        </div>
+                    </div>
+                    <div class="form-group full">
+                        <label for="designNote">设计说明</label>
+                        <textarea id="designNote" rows="4" placeholder="请描述您的设计理念和特殊需求..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        提交设计
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部横幅 -->
+    <footer class="footer">
+        <div class="footer-decoration"></div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="footer-logo-icon">玉</span>
+                <span class="footer-logo-text">玉韵</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="gallery.html">玉石鉴赏</a>
+                <a href="culture.html">文化典藏</a>
+                <a href="creation.html">玉石创作</a>
+                <a href="appraisal.html">专业鉴定</a>
+            </div>
+            <p class="footer-copyright">© 2026 玉韵 JadeCharm. 传承千年玉文化</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/creation.js"></script>
+</body>
+</html>

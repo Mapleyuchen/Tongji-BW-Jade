@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉韵 - 古典玉石鉴赏平台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 顶部横幅 - 国字顶横 -->
+    <header class="header" id="header">
+        <div class="header-decoration header-decoration-left"></div>
+        <div class="header-decoration header-decoration-right"></div>
+        
+        <div class="header-content">
+            <a href="#" class="logo">
+                <span class="logo-icon">玉</span>
+                <div class="logo-text">
+                    <h1>玉韵</h1>
+                    <p class="logo-subtitle"> Jade Charm</p>
+                </div>
+            </a>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">首页</a></li>
+                    <li class="nav-item"><a href="gallery.html">玉石鉴赏</a></li>
+                    <li class="nav-item"><a href="culture.html">文化典藏</a></li>
+                    <li class="nav-item"><a href="creation.html">玉石创作</a></li>
+                    <li class="nav-item"><a href="appraisal.html">专业鉴定</a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+        
+        <div class="cloud-pattern"></div>
+    </header>
+
+    <div class="page-wrapper">
+        <!-- 左侧横幅 - 国字左竖 -->
+        <aside class="left-sidebar" id="leftSidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-quote">
+                    <p class="vertical-text">品玉·悟道</p>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">玉石分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#" class="category-link active" data-category="all">全部</a></li>
+                        <li><a href="#" class="category-link" data-category="feicui">翡翠</a></li>
+                        <li><a href="#" class="category-link" data-category="hetian">和田玉</a></li>
+                        <li><a href="#" class="category-link" data-category="biyu">碧玉</a></li>
+                        <li><a href="#" class="category-link" data-category="dushan">独山玉</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section today-pick">
+                    <h3 class="sidebar-title">今日推荐</h3>
+                    <div class="pick-card">
+                        <div class="pick-image">
+                            <img src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?w=200&h=200&fit=crop" alt="翡翠观音">
+                        </div>
+                        <p class="pick-name">翡翠观音吊坠</p>
+                        <p class="pick-desc">色泽温润，雕工精细</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 中央主区域 - 国字中宫 -->
+        <main class="main-content">
+            <!-- Hero 区域 -->
+            <section class="hero" id="home">
+                <div class="hero-inner">
+                    <div class="hero-carousel" id="heroCarousel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active">
+                                <div class="slide-image">
+                                    <img src="https://images.unsplash.com/photo-1611080541599-8c6dbde6ed28?w=800&h=600&fit=crop" alt="翡翠摆件">
+                                </div>
+                                <div class="slide-content">
+                                    <h2 class="slide-title">翡翠山水牌</h2>
+                                    <p class="slide-subtitle">「山不在高，有仙则名」</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-image">
+                                    <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?w=800&h=600&fit=crop" alt="和田玉">
+                                </div>
+                                <div class="slide-content">
+                                    <h2 class="slide-title">羊脂白玉佩</h2>
+                                    <p class="slide-subtitle">「言念君子，温其如玉」</p>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-image">
+                                    <img src="https://images.unsplash.com/photo-1598618356794-eb1720430eb4?w=800&h=600&fit=crop" alt="碧玉">
+                                </div>
+                                <div class="slide-content">
+                                    <h2 class="slide-title">菠菜绿碧玉镯</h2>
+                                    <p class="slide-subtitle">「翠色盈盈，碧波荡漾」</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-nav">
+                            <button class="carousel-btn prev" aria-label="上一张">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M15 18l-6-6 6-6"/>
+                                </svg>
+                            </button>
+                            <div class="carousel-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <button class="carousel-btn next" aria-label="下一张">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                    <path d="M9 18l6-6-6-6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-decoration left"></div>
+                <div class="hero-decoration right"></div>
+            </section>
+
+            <!-- 玉石鉴赏区域 -->
+            <section class="gallery-section" id="gallery">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <span class="section-line"></span>
+                        <h2 class="section-title">玉石鉴赏</h2>
+                        <span class="section-subtitle">Jade Appreciation</span>
+                        <span class="section-line"></span>
+                    </div>
+                    <p class="section-desc">千年玉文化，一品玉韵长</p>
+                </div>
+                
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <span class="filter-label">种类</span>
+                        <div class="filter-tags" id="filterTags">
+                            <button class="filter-tag active" data-filter="all">全部</button>
+                            <button class="filter-tag" data-filter="feicui">翡翠</button>
+                            <button class="filter-tag" data-filter="hetian">和田玉</button>
+                            <button class="filter-tag" data-filter="biyu">碧玉</button>
+                            <button class="filter-tag" data-filter="dushan">独山玉</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jade-grid" id="jadeGrid">
+                    <!-- 动态生成玉石卡片 -->
+                </div>
+            </section>
+
+            <!-- 文化典藏区域 -->
+            <section class="culture-section" id="culture">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <span class="section-line"></span>
+                        <h2 class="section-title">文化典藏</h2>
+                        <span class="section-subtitle">Cultural Heritage</span>
+                        <span class="section-line"></span>
+                    </div>
+                    <p class="section-desc">玉之五德，承载千年文明</p>
+                </div>
+                
+                <div class="culture-cards">
+                    <div class="culture-card">
+                        <div class="culture-icon">仁</div>
+                        <h3>玉之仁</h3>
+                        <p>温润以泽，仁也。玉石温润的光泽如同君子的仁德之心，温和而包容。</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">义</div>
+                        <h3>玉之义</h3>
+                        <p>垂之如坠，义也。玉石沉稳厚重，象征着正直与道义。</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">礼</div>
+                        <h3>玉之礼</h3>
+                        <p>缜密以栗，礼也。玉石结构致密，代表着礼仪与秩序。</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">智</div>
+                        <h3>玉之智</h3>
+                        <p>声远而清，智也。玉石敲击声清脆悠扬，寓意智慧与通达。</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">信</div>
+                        <h3>玉之信</h3>
+                        <p>瑕不掩瑜，信也。玉石虽有瑕疵却不掩其美，象征真诚与信用。</p>
+                    </div>
+                </div>
+
+                <div class="famous-quotes">
+                    <blockquote class="quote-item">
+                        <p>「君子比德于玉」</p>
+                        <cite>——《礼记》</cite>
+                    </blockquote>
+                    <blockquote class="quote-item">
+                        <p>「玉不琢，不成器；人不学，不知道」</p>
+                        <cite>——《礼记》</cite>
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- 关于我们 -->
+            <section class="about-section" id="about">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <span class="section-line"></span>
+                        <h2 class="section-title">关于我们</h2>
+                        <span class="section-subtitle">About Us</span>
+                        <span class="section-line"></span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1514454709136-54a427617d1b?w=600&h=400&fit=crop" alt="玉石鉴赏">
+                    </div>
+                    <div class="about-text">
+                        <h3>玉韵 · 传承千年玉文化</h3>
+                        <p>玉韵是一个致力于中国玉石文化传播与鉴赏的在线平台。我们汇聚了来自全国各地的玉石珍品，为玉石爱好者和收藏家提供一个专业的交流空间。</p>
+                        <p>在这里，您可以欣赏到翡翠的翠绿欲滴、和田玉的温润如脂、碧玉的碧波荡漾。每一件玉石都承载着大自然的鬼斧神工和工匠的精心雕琢。</p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">鉴</span>
+                                <span>专业鉴赏</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">藏</span>
+                                <span>珍品收藏</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">传</span>
+                                <span>文化传承</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 右侧横幅 - 国字右竖 -->
+        <aside class="right-sidebar" id="rightSidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">玉石小知识</h3>
+                    <div class="knowledge-cards">
+                        <div class="knowledge-card">
+                            <p class="knowledge-q">如何辨别翡翠A货与B货？</p>
+                            <p class="knowledge-a">A货翡翠敲击声音清脆，B货因注胶而声音沉闷。</p>
+                        </div>
+                        <div class="knowledge-card">
+                            <p class="knowledge-q">和田玉的"羊脂白"是什么？</p>
+                            <p class="knowledge-a">指白玉中质地最细腻、色泽最温润的顶级品种。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section ranking">
+                    <h3 class="sidebar-title">热门玉石排行</h3>
+                    <ol class="ranking-list">
+                        <li class="ranking-item">
+                            <span class="rank-num">1</span>
+                            <span class="rank-name">玻璃种翡翠</span>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="rank-num">2</span>
+                            <span class="rank-name">羊脂白玉</span>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="rank-num">3</span>
+                            <span class="rank-name">菠菜绿碧玉</span>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="rank-num">4</span>
+                            <span class="rank-name">紫罗兰翡翠</span>
+                        </li>
+                        <li class="ranking-item">
+                            <span class="rank-num">5</span>
+                            <span class="rank-name">和田黄玉</span>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="sidebar-section poetry">
+                    <h3 class="sidebar-title">玉言诗韵</h3>
+                    <div class="poetry-content">
+                        <p class="poetry-text">「兰陵美酒郁金香，<br>玉碗盛来琥珀光。」</p>
+                        <cite>—— 唐·李白</cite>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 底部横幅 - 国字底横 -->
+    <footer class="footer" id="footer">
+        <div class="footer-decoration"></div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="footer-logo-icon">玉</span>
+                <span class="footer-logo-text">玉韵</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="gallery.html">玉石鉴赏</a>
+                <a href="culture.html">文化典藏</a>
+                <a href="creation.html">玉石创作</a>
+                <a href="appraisal.html">专业鉴定</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link" aria-label="微信">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.03-.406-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="微博">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.739 5.443zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.194.573zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.578-.182-.401-.649.387-1.028.431-1.852-.001-2.386-.689-.854-2.655-.708-5.097-.221-.529.105-.627-.243-.305-.698.771-1.085.854-2.383.178-3.379-1.625-2.386-6.263-2.337-9.977-.185-.996.576-1.156 1.677-.354 2.441.771.736.813 1.752.396 2.646-.405.869-.362 1.85-.068 2.61.229.592.04.835-.429.942-1.401.32-2.228 1.161-2.106 2.534.12 1.354 1.567 2.358 3.524 2.358 6.482 0 9.716-5.379 9.253-8.891-.047-.355-.108-.722-.223-1.063l-.002.001c-.045-.146-.088-.292-.13-.435l-.002.002zm-1.484-6.432c-.698-.215-1.583-.373-2.284-.241a1.53 1.53 0 0 0-.945.561 1.52 1.52 0 0 0-.343 1.062c.103.699.683 1.212 1.377 1.212.698.215 1.583.373 2.284.241a1.53 1.53 0 0 0 .945-.561 1.52 1.52 0 0 0 .343-1.062c-.103-.699-.683-1.212-1.377-1.212z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-copyright">© 2026 玉韵 JadeCharm. 传承千年玉文化</p>
+            <p class="footer-credits">玉石学课程大作业</p>
+        </div>
+    </footer>
+
+    <!-- 灯箱组件 -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="关闭">
+            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <div class="lightbox-info" id="lightboxInfo">
+                <h3 class="lightbox-title"></h3>
+                <p class="lightbox-desc"></p>
+            </div>
+        </div>
+        <button class="lightbox-nav prev" aria-label="上一张">
+            <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav next" aria-label="下一张">
+            <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

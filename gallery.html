@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玉石鉴赏 - 玉韵</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- 顶部横幅 -->
+    <header class="header" id="header">
+        <div class="header-decoration header-decoration-left"></div>
+        <div class="header-decoration header-decoration-right"></div>
+        
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">玉</span>
+                <div class="logo-text">
+                    <h1>玉韵</h1>
+                    <p class="logo-subtitle">Jade Charm</p>
+                </div>
+            </a>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html">首页</a></li>
+                    <li class="nav-item active"><a href="gallery.html">玉石鉴赏</a></li>
+                    <li class="nav-item"><a href="culture.html">文化典藏</a></li>
+                    <li class="nav-item"><a href="creation.html">玉石创作</a></li>
+                    <li class="nav-item"><a href="appraisal.html">专业鉴定</a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+        
+        <div class="cloud-pattern"></div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="page-main">
+        <!-- 页面标题区 -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h2 class="page-title">玉石鉴赏</h2>
+                <p class="page-subtitle">Jade Appreciation</p>
+                <p class="page-desc">品鉴天下美玉，传承千年文化</p>
+            </div>
+            <div class="page-hero-decoration"></div>
+        </section>
+
+        <!-- 筛选区域 -->
+        <section class="gallery-filter-section">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <h3 class="filter-title">玉石种类</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">全部</button>
+                        <button class="filter-btn" data-filter="feicui">翡翠</button>
+                        <button class="filter-btn" data-filter="hetian">和田玉</button>
+                        <button class="filter-btn" data-filter="biyu">碧玉</button>
+                        <button class="filter-btn" data-filter="dushan">独山玉</button>
+                        <button class="filter-btn" data-filter="hetian">和田玉</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3 class="filter-title">颜色</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn" data-color="all">全部</button>
+                        <button class="filter-btn" data-color="green">绿色系</button>
+                        <button class="filter-btn" data-color="white">白色系</button>
+                        <button class="filter-btn" data-color="purple">紫色系</button>
+                        <button class="filter-btn" data-color="yellow">黄色系</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3 class="filter-title">价格区间</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn" data-price="all">全部</button>
+                        <button class="filter-btn" data-price="low">10万以下</button>
+                        <button class="filter-btn" data-price="mid">10-50万</button>
+                        <button class="filter-btn" data-price="high">50万以上</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 玉石展示网格 -->
+        <section class="gallery-grid-section">
+            <div class="gallery-stats">
+                <span class="stats-count">共 <strong id="jadeCount">8</strong> 件藏品</span>
+                <div class="sort-options">
+                    <label>排序：</label>
+                    <select id="sortSelect">
+                        <option value="default">默认排序</option>
+                        <option value="price-asc">价格从低到高</option>
+                        <option value="price-desc">价格从高到低</option>
+                        <option value="name">按名称</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- 动态生成 -->
+            </div>
+            
+            <!-- 分页 -->
+            <div class="pagination">
+                <button class="page-btn prev" disabled>上一页</button>
+                <div class="page-numbers">
+                    <span class="page-num active">1</span>
+                    <span class="page-num">2</span>
+                    <span class="page-num">3</span>
+                </div>
+                <button class="page-btn next">下一页</button>
+            </div>
+        </section>
+
+        <!-- 玉石知识小贴士 -->
+        <section class="jade-tips-section">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <span class="section-line"></span>
+                    <h2 class="section-title">鉴赏小贴士</h2>
+                    <span class="section-line"></span>
+                </div>
+            </div>
+            
+            <div class="tips-cards">
+                <div class="tip-card">
+                    <div class="tip-icon">观</div>
+                    <h3>观其色</h3>
+                    <p>优质翡翠颜色浓郁纯正，分布均匀。帝王绿为翡翠中的极品，颜色深沉而不暗，鲜艳而不俗。</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">透</div>
+                    <h3>察其透</h3>
+                    <p>透光观察玉石内部结构，天然翡翠纹理自然，B货、C货则有气泡或酸蚀纹。</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">听</div>
+                    <h3>听其声</h3>
+                    <p>轻轻敲击玉石，天然翡翠声音清脆悠扬，注胶玉石声音沉闷。</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">触</div>
+                    <h3>摸其质</h3>
+                    <p>天然玉石触感温润细腻，密度高，入手有沉甸甸的压手感。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 灯箱 -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="关闭">
+            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-origin" id="lightboxOrigin"></p>
+                <p class="lightbox-desc" id="lightboxDesc"></p>
+                <div class="lightbox-tags" id="lightboxTags"></div>
+                <p class="lightbox-price" id="lightboxPrice"></p>
+            </div>
+        </div>
+        <button class="lightbox-nav prev" aria-label="上一张">
+            <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav next" aria-label="下一张">
+            <svg viewBox="0 0 24 24" width="40" height="40" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- 底部横幅 -->
+    <footer class="footer">
+        <div class="footer-decoration"></div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="footer-logo-icon">玉</span>
+                <span class="footer-logo-text">玉韵</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="gallery.html">玉石鉴赏</a>
+                <a href="culture.html">文化典藏</a>
+                <a href="creation.html">玉石创作</a>
+                <a href="appraisal.html">专业鉴定</a>
+            </div>
+            <p class="footer-copyright">© 2026 玉韵 JadeCharm. 传承千年玉文化</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
