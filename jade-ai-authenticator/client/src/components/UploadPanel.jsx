@@ -2,15 +2,14 @@ import { useRef, useState } from 'react';
 import {
   UploadCloud,
   Image as ImageIcon,
-  ShieldCheck,
   X,
   Plus,
   Trash2,
   Sparkles,
-  Layers3,
-  ScanSearch,
   ArrowLeftRight,
-  ClipboardCheck
+  ClipboardCheck,
+  Feather,
+  WandSparkles
 } from 'lucide-react';
 
 const SHOT_TIPS = [
@@ -116,9 +115,9 @@ export function UploadPanel({
     <section className="panel upload-panel" onPaste={handlePaste}>
       <div className="panel-title-row">
         <div>
-          <p className="eyebrow"><Sparkles size={14} /> Jade AI Authenticator</p>
-          <h1>玉石智能鉴别真伪</h1>
-          <p className="subhead">拖拽上传、多图综合、结构化报告。用 AI 做初步风险评估，而不是伪装成绝对鉴定证书。</p>
+          <p className="eyebrow"><Feather size={14} /> 专业鉴定</p>
+          <h2>上传鉴别素材</h2>
+          <p className="subhead">请尽量提供同一件玉石的多角度照片。图片越接近自然光、透光和局部纹理，报告越具体。</p>
         </div>
       </div>
 
@@ -234,7 +233,7 @@ export function UploadPanel({
         <div className="field-group">
           <div className="form-card-title">
             <span>辅助信息</span>
-            <small>可选，但会提升报告针对性</small>
+            <small>可选填写，用于提升报告针对性</small>
           </div>
 
           <label>
@@ -269,8 +268,8 @@ export function UploadPanel({
           </label>
 
           <button disabled={!hasImages || loading} type="submit" className="primary-btn">
-            {loading ? <span className="spinner" /> : <Sparkles size={18} />}
-            {loading ? '正在生成正式鉴别报告...' : '开始智能鉴别'}
+            {loading ? <span className="spinner" /> : <WandSparkles size={18} />}
+            {loading ? '正在生成鉴别报告...' : '开始智能鉴别'}
           </button>
 
           {loading && (
@@ -285,7 +284,7 @@ export function UploadPanel({
 
           <div className="tip-card">
             <ImageIcon size={18} />
-            <p>建议一次上传 3–6 张不同角度图片。多图会减少“信息不足导致中等风险”的情况，但普通照片仍不能替代专业仪器检测。</p>
+            <p>建议一次上传 3–6 张同一件玉石的不同角度照片。普通照片只能做辅助判断，无法替代专业仪器检测。</p>
           </div>
         </div>
       </form>

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Sparkles, ShieldCheck, Gem, ScrollText } from 'lucide-react';
 import { UploadPanel } from './components/UploadPanel.jsx';
 import { ReportPanel } from './components/ReportPanel.jsx';
 import { identifyJade } from './api/jadeApi.js';
@@ -23,6 +24,30 @@ const ANALYSIS_STAGES = [
 
 function makeFileKey(file) {
   return `${file.name}_${file.size}_${file.lastModified}`;
+}
+
+function SiteHeader() {
+  return (
+    <header className="site-header">
+      <div className="site-header-inner">
+        <a className="brand-mark" href="/" aria-label="玉韵首页">
+          <span className="brand-seal">玉</span>
+          <span>
+            <strong>玉韵</strong>
+            <small>JADE CHARM · CLASSIC APPRECIATION</small>
+          </span>
+        </a>
+        <nav className="site-nav" aria-label="主导航">
+          <a href="/">首页</a>
+          <a href="/gallery">玉石鉴赏</a>
+          <a href="/culture">文化典藏</a>
+          <a href="/creation">玉石创作</a>
+          <a href="/appraisal" className="active">专业鉴定</a>
+        </nav>
+      </div>
+      <div className="wave-divider" aria-hidden="true" />
+    </header>
+  );
 }
 
 export default function App() {
@@ -161,10 +186,29 @@ export default function App() {
   }
 
   return (
-    <main className="app-shell">
-      <div className="hero-bg" />
-      <div className="mesh mesh-one" />
-      <div className="mesh mesh-two" />
+    <main className="site-page">
+      <SiteHeader />
+
+      <section className="app-hero" aria-labelledby="hero-title">
+        <div className="hero-vertical">鉴玉 · 辨真</div>
+        <div className="hero-content">
+          <p className="hero-kicker"><Gem size={16} /> AI JADE APPRAISAL</p>
+          <h1 id="hero-title">玉石智能鉴别</h1>
+          <p>上传玉石多角度照片，系统将从颜色、光泽、透明度、纹理和异常痕迹等方面生成辅助鉴别报告。</p>
+          <div className="hero-note">
+            <ShieldCheck size={18} />
+            <span>仅作图像辅助分析，重要藏品仍建议送专业检测机构复核。</span>
+          </div>
+        </div>
+        <div className="hero-card" aria-hidden="true">
+          <div className="jade-disc disc-one" />
+          <div className="jade-disc disc-two" />
+          <div className="jade-disc disc-three" />
+          <ScrollText size={38} />
+          <span>结构化报告</span>
+        </div>
+      </section>
+
       <div className="content-wrap">
         <UploadPanel
           images={images}
