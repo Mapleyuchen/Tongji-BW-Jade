@@ -1,0 +1,19 @@
+{
+  "name": "bw-jade",
+  "version": "1.0.0",
+  "description": "玉韵 - 古典玉石鉴赏平台 | Jade Charm - Classic Jade Appreciation Platform",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server run start",
+    "preview": "npm --prefix client run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

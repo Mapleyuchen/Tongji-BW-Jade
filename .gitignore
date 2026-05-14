@@ -1,0 +1,41 @@
+# 依赖目录
+node_modules/
+client/node_modules/
+server/node_modules/
+jade-ai-authenticator/node_modules/
+jade-ai-authenticator/client/node_modules/
+jade-ai-authenticator/server/node_modules/
+
+# 构建产物
+client/dist/
+server/public/
+dist/
+build/
+
+# Vite 缓存
+client/.vite/
+jade-ai-authenticator/client/.vite/
+
+# 环境变量（含密钥，不提交）
+.env
+server/.env
+jade-ai-authenticator/server/.env
+*.env.local
+
+# 编辑器 / IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+logs/
+
+# 临时文件
+tmp/
+temp/
